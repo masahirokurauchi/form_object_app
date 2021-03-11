@@ -7,7 +7,9 @@ class DonationsController < ApplicationController
   end
 
   def create
-    @donation = UserDonation.save(donation_params)
+    @donation = UserDonation.new(donation_params)
+    @donation.save
+    redirect_to root_path
   end
 
   private
