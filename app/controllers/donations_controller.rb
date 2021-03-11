@@ -8,8 +8,14 @@ class DonationsController < ApplicationController
 
   def create
     @donation = UserDonation.new(donation_params)
-    @donation.save
-    redirect_to root_path
+
+    if @donation.valid?
+      @donation.save  # バリデーションをクリアした時
+      flash[:notice] = 'フォームが送信されました'
+      return redirect_to root_path
+    else
+      render "new"    # バリデーションに弾かれ時
+    end
   end
 
   private
