@@ -11,6 +11,7 @@ class DonationsController < ApplicationController
 
     if @donation.valid?
       @donation.save  # バリデーションをクリアした時
+      
       flash[:notice] = 'フォームが送信されました'
       return redirect_to root_path
     else
