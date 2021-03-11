@@ -1,0 +1,31 @@
+// Place all the styles related to the donations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.field {
+	display: flex;
+	flex-direction: column;
+}
+
+input[type="text"] {
+        width: 200px;
+        height: 20px;
+    }
+
+#user_donation_prefecture {
+        width: 100px;
+        height: 20px;
+    }
+
+.notifications {
+  color: #FFF;
+  text-align: center;  
+
+  .notice {
+    background-color: #38AEF0;
+  }
+
+  .alert {
+    background-color: #F35500;
+  }
+}
