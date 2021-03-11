@@ -16,3 +16,16 @@ input[type="text"] {
         width: 100px;
         height: 20px;
     }
+
+.notifications {
+  color: #FFF;
+  text-align: center;  
+
+  .notice {
+    background-color: lightBlue;
+  }
+
+  .alert {
+    background-color: alert_orange;
+  }
+}
