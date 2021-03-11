@@ -7,7 +7,7 @@ class DonationsController < ApplicationController
   end
 
   def create
-    @donation = User.new(donation_params)
+    @donation = UserDonation.new(donation_params)   #「UserDonation」に編集
   end
 
   private
