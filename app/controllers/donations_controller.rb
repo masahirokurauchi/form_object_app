@@ -11,10 +11,11 @@ class DonationsController < ApplicationController
 
     if @donation.valid?
       @donation.save  # バリデーションをクリアした時
-      
-      flash[:notice] = 'フォームが送信されました'
+
+      flash[:notice] = 'フォームが送信されました。'
       return redirect_to root_path
     else
+      flash.now[:alert] = 'フォームが送信できませんでした。'
       render "new"    # バリデーションに弾かれ時
     end
   end
